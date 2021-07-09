@@ -61,10 +61,9 @@ public class CountryListManager {
                 
                 // Retrieve the unstyled image for customized use
                 let iconConfig = UIImage.SymbolConfiguration(scale: .large)
-                let gearIcon = UIImage(systemName: "flag", withConfiguration: iconConfig)
+                let flagPlaceHolder = UIImage(systemName: "flag", withConfiguration: iconConfig)
                 
-                let originalImage = flag?.originalImage ?? gearIcon
-                // let originalImage = flag?.image(style: .circle) ?? gearIcon
+                let originalImage = flag?.originalImage ?? flagPlaceHolder
                 let country = Country(countryCode: currencyCode as! String, name: name, localeId: localeIdentifier, countryFlagImage: originalImage! )
                 countriesArr.append(country)
             }
