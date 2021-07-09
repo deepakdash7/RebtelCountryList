@@ -74,7 +74,6 @@
 				B4314623269731FB0064772F /* SceneDelegate.swift */,
 				B431472A269896450064772F /* Model */,
 				B431472B269896A30064772F /* ViewModel */,
-				B43146372697322B0064772F /* CountryPickerTableViewController.swift */,
 				B431472C269896D30064772F /* View */,
 				B431462A269731FE0064772F /* Assets.xcassets */,
 				B4314643269732D50064772F /* Main.storyboard */,
@@ -103,6 +102,7 @@
 		B431472C269896D30064772F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B43146372697322B0064772F /* CountryPickerTableViewController.swift */,
 				B43146382697322B0064772F /* CountryPickerTableViewControllerDelegate.swift */,
 				B4314625269731FB0064772F /* ViewController.swift */,
 				B4314641269732760064772F /* UserTextField.swift */,
