@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
+        }
+      },
+      {
+        "package": "FlagKit",
+        "repositoryURL": "https://github.com/madebybowtie/FlagKit.git",
+        "state": {
+          "branch": null,
+          "revision": "f12111d91902d23fd1d9cc7ad9198030b049795d",
+          "version": "2.4.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
