@@ -24,7 +24,6 @@ public class CountryListManager {
     public func getCountry(completion: @escaping ([String]) -> ()) {
         let url: String = "https://restcountries.eu/rest/v2/all"
         AF.request(url).responseJSON { (responseData) -> Void in
-            print(responseData.result)
             do {
                 guard let data = responseData.data else { return }
                 let res  = try JSONDecoder().decode([CountryName].self,from:data)
@@ -48,20 +47,7 @@ public class CountryListManager {
         return country
     }
     
-    
-    private func locale(for fullCountryName : String) -> String {
-        let locales : String = ""
-        for localeCode in NSLocale.isoCountryCodes {
-            let identifier = NSLocale(localeIdentifier: localeCode)
-            let countryName = identifier.displayName(forKey: NSLocale.Key.countryCode, value: localeCode)
-            if fullCountryName.lowercased() == countryName?.lowercased() {
-                return localeCode
-            }
-        }
-        return locales
-    }
-    
-    func getCountries1(completion: @escaping ([Country]) -> ()) {
+    func getCountries(completion: @escaping ([Country]) -> ()) {
         var countriesArr: [Country] = []
         let _: () = getCountry { result in
             
@@ -90,7 +76,6 @@ public class CountryListManager {
                 country.index = flagIndex
                 flagIndex += 1
             }
-            print(countriesArr)
             completion(countriesArr)
         }
     }

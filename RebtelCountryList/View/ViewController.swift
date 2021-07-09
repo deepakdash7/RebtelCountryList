@@ -27,8 +27,7 @@ class ViewController: UIViewController {
         
         // fetch a list of countries
         let countryListManager = CountryListManager.shared
-        let countriesArr = countryListManager.countries
-        print("Countries: \(String(describing: countriesArr))")
+        _ = countryListManager.countries
     }
 }
 

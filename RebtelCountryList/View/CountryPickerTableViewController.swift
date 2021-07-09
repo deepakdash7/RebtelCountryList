@@ -16,8 +16,7 @@ public class CountryPickerTableViewController: UITableViewController {
     
     override public func viewWillAppear(_ animated: Bool) {
         let countryListManager = CountryListManager.shared
-        
-        countryListManager.getCountries1(){ (country : [Country]) in   // Object received from closure
+        countryListManager.getCountries(){ (country : [Country]) in   // Object received from closure
             self.countriesArr = country
             DispatchQueue.main.async {
                 //  Updating UI on main queue
